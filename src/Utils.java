@@ -1,4 +1,4 @@
-package com.example.WebCrawler.ConcurrentWebCrawler;
+package com.example.WebCrawler.ConcurrentWebCrawler.src;
 
 import java.io.IOException;
 import java.net.MalformedURLException;
@@ -8,7 +8,7 @@ import java.net.URLConnection;
 public class Utils {
 
 
-//    domain ex: monzo.com
+    //    domain ex: monzo.com
     public static  String getDomain(String url) {
         try {
             URL parsedUrl = new URL(url);
@@ -41,7 +41,7 @@ public class Utils {
 
     public static String getNormalizedUrl(URL url) throws MalformedURLException {
         String normalizedUrl = url.getProtocol() + "://" + url.getHost() + url.getPath();
-        if(url.getPath().equals(null))
+        if(url.getPath().equals(""))
         {
             normalizedUrl+="/";
         }
